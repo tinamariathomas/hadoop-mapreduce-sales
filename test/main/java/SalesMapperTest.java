@@ -18,7 +18,7 @@ public class SalesMapperTest {
     }
     @Test
     public void testMap() throws IOException {
-        mapDriver.withInput(new LongWritable(1),new Text("Jan-17\tJanice\tJeans\tBangalore\t1500"));
+        mapDriver.withInput(new LongWritable(1),new Text("Jan-17,Janice,Jeans,Bangalore,1500"));
         mapDriver.withOutput(new Text("Bangalore"),new IntWritable(1500));
         mapDriver.runTest();
     }
